@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.liuenci.dao.DeptMapper">
+    <resultMap id="BaseResultMap" type="com.liuenci.pojo.Dept" >
+        <constructor >
+            <idArg column="deptno" jdbcType="INTEGER" javaType="java.lang.Integer" />
+            <arg column="dname" jdbcType="VARCHAR" javaType="java.lang.String" />
+            <arg column="loc" jdbcType="VARCHAR" javaType="java.lang.String" />
+        </constructor>
+    </resultMap>
+    <sql id="Base_Column_List" >
+        deptno,dname,loc
+    </sql>
+
+    <select id="getAllDept" resultMap="BaseResultMap">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM DEPT
+    </select>
+</mapper>
