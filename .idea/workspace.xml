@@ -7,39 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="def17b08-92e7-48ce-b63a-333c850343d0" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_druid_1_1_3.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jsqlparser_jsqlparser_1_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_pagehelper_pagehelper_5_0_3.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_44.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_8_10.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_4_4.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_3_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_log4j12_1_7_25.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_3_10_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_asm_3_1_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_4_3_10_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_3_10_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_3_10_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_3_10_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_3_10_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_4_3_10_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_4_3_10_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/ojdbc8.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/liuenci/controller/DeptController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/liuenci/dao/DeptMapper.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/liuenci/pojo/Dept.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resource/applicationContext.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resource/datasource.properties" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resource/log4j.properties" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resource/mappers/DeptMapper" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resource/mybatis-config.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/mybatis_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/mybatis_war_exploded.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/mybatis.iml" afterPath="$PROJECT_DIR$/mybatis.iml" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liuenci/controller/DeptController.java" afterPath="$PROJECT_DIR$/src/main/java/com/liuenci/controller/DeptController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liuenci/dao/DeptMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/liuenci/dao/DeptMapper.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/resource/mappers/DeptMapper" afterPath="$PROJECT_DIR$/src/main/resource/mappers/DeptMapper" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -63,107 +33,7 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="93" column="17" lean-forward="false" selection-start-line="93" selection-start-column="17" selection-end-line="93" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="log4j.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resource/log4j.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="datasource.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resource/datasource.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="3" column="15" lean-forward="false" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DeptMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/liuenci/dao/DeptMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="7" column="25" lean-forward="false" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="25" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DeptMapper" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resource/mappers/DeptMapper">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-              <folding>
-                <marker date="1525957260053" expanded="true" signature="713:781" ph="SELECT FROM DEPT" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DeptController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/liuenci/controller/DeptController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="83">
-              <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Dept.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/liuenci/pojo/Dept.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-              <folding>
-                <element signature="e#333#334#0" expanded="true" />
-                <element signature="e#362#363#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="applicationContext.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resource/applicationContext.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" column="81" lean-forward="false" selection-start-line="5" selection-start-column="81" selection-end-line="5" selection-end-column="81" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mybatis-config.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resource/mybatis-config.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="563">
-              <caret line="34" column="44" lean-forward="false" selection-start-line="34" selection-start-column="44" selection-end-line="34" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -201,13 +71,13 @@
         <option value="$PROJECT_DIR$/src/main/java/dao/DeptMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/DeptController.java" />
         <option value="$PROJECT_DIR$/src/main/resource/applicationContext.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/liuenci/dao/DeptMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/liuenci/controller/DeptController.java" />
         <option value="$PROJECT_DIR$/src/main/resource/mybatis-config.xml" />
-        <option value="$PROJECT_DIR$/src/main/resource/mappers/DeptMapper" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/resource/log4j.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/liuenci/pojo/Dept.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/liuenci/dao/DeptMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resource/mappers/DeptMapper" />
+        <option value="$PROJECT_DIR$/src/main/java/com/liuenci/controller/DeptController.java" />
       </list>
     </option>
   </component>
@@ -253,9 +123,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="800" />
-    <option name="width" value="800" />
-    <option name="height" value="860" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1616" />
+    <option name="height" value="876" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -387,7 +258,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.DeptController.test1">
+  <component name="RunManager" selected="JUnit.DeptController.testAddNewDept">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
@@ -421,6 +292,31 @@
       <option name="PACKAGE_NAME" value="com.liuenci.controller" />
       <option name="MAIN_CLASS_NAME" value="com.liuenci.controller.DeptController" />
       <option name="METHOD_NAME" value="test1" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="DeptController.testAddNewDept" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.liuenci.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="mybatis" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.liuenci.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.liuenci.controller.DeptController" />
+      <option name="METHOD_NAME" value="testAddNewDept" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -699,13 +595,15 @@
       <option name="PROGRAM_PARAMETERS" />
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
-    <list size="2">
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Tomcat Server.tomcat" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.DeptController.test1" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.DeptController.testAddNewDept" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.DeptController.test1" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.DeptController.testAddNewDept" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.DeptController.test1" />
       </list>
     </recent_temporary>
   </component>
@@ -724,32 +622,11 @@
       <updated>1525950837772</updated>
       <workItem from="1525950839407" duration="1202000" />
       <workItem from="1525952119442" duration="1643000" />
-      <workItem from="1525953771469" duration="3959000" />
+      <workItem from="1525953771469" duration="7065000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="DeptController_test1 - 2018.05.10 at 20h 39m 53s.xml">
-      <configuration name="DeptController.test1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DeptController_test1 - 2018.05.10 at 20h 41m 06s.xml">
-      <configuration name="DeptController.test1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DeptController_test1 - 2018.05.10 at 20h 43m 45s.xml">
-      <configuration name="DeptController.test1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DeptController_test1 - 2018.05.10 at 20h 48m 44s.xml">
-      <configuration name="DeptController.test1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DeptController_test1 - 2018.05.10 at 20h 51m 19s.xml">
-      <configuration name="DeptController.test1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DeptController_test1 - 2018.05.10 at 20h 59m 45s.xml">
-      <configuration name="DeptController.test1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DeptController_test1 - 2018.05.10 at 21h 02m 20s.xml">
-      <configuration name="DeptController.test1" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="DeptController_test1 - 2018.05.10 at 21h 04m 22s.xml">
       <configuration name="DeptController.test1" configurationId="JUnit" />
     </history-entry>
@@ -759,9 +636,30 @@
     <history-entry file="DeptController_test1 - 2018.05.10 at 21h 06m 01s.xml">
       <configuration name="DeptController.test1" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="DeptController_testAddNewDept - 2018.05.10 at 21h 22m 43s.xml">
+      <configuration name="DeptController.testAddNewDept" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DeptController_testAddNewDept - 2018.05.10 at 21h 23m 06s.xml">
+      <configuration name="DeptController.testAddNewDept" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DeptController_testAddNewDept - 2018.05.10 at 21h 25m 23s.xml">
+      <configuration name="DeptController.testAddNewDept" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DeptController_testAddNewDept - 2018.05.10 at 21h 45m 58s.xml">
+      <configuration name="DeptController.testAddNewDept" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DeptController_testAddNewDept - 2018.05.10 at 21h 52m 42s.xml">
+      <configuration name="DeptController.testAddNewDept" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DeptController_testAddNewDept - 2018.05.10 at 21h 56m 04s.xml">
+      <configuration name="DeptController.testAddNewDept" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DeptController_testAddNewDept - 2018.05.10 at 21h 57m 40s.xml">
+      <configuration name="DeptController.testAddNewDept" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6804000" />
+    <option name="totallyTimeSpent" value="9910000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -786,7 +684,7 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5681512" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.072874494" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32928476" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2159383" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -849,14 +747,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resource/mybatis-config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="563">
-          <caret line="34" column="44" lean-forward="false" selection-start-line="34" selection-start-column="44" selection-end-line="34" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
@@ -881,36 +771,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/liuenci/dao/DeptMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="25" lean-forward="false" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resource/mappers/DeptMapper">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding>
-            <marker date="1525957260053" expanded="true" signature="713:781" ph="SELECT FROM DEPT" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/liuenci/controller/DeptController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
-          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/liuenci/pojo/Dept.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -918,6 +778,45 @@
           <folding>
             <element signature="e#333#334#0" expanded="true" />
             <element signature="e#362#363#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resource/mappers/DeptMapper">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="49" lean-forward="false" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
+          <folding>
+            <marker date="1525960353588" expanded="true" signature="713:781" ph="SELECT FROM DEPT" />
+            <marker date="1525960353588" expanded="true" signature="873:958" ph="insert into dept... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resource/mybatis-config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="34" column="44" lean-forward="false" selection-start-line="34" selection-start-column="44" selection-end-line="34" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/liuenci/dao/DeptMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="18" lean-forward="false" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/liuenci/controller/DeptController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="48" column="25" lean-forward="true" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

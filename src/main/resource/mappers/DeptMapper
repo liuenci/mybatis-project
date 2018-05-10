@@ -18,4 +18,10 @@
         <include refid="Base_Column_List"/>
         FROM DEPT
     </select>
+
+    <insert id="addNewDept" parameterType="com.liuenci.pojo.Dept" >
+        insert into dept(deptno,dname,loc)
+        VALUES
+        (#{deptno},#{dname},#{loc})
+    </insert>
 </mapper>

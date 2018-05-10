@@ -5,6 +5,7 @@ import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
@@ -30,11 +31,22 @@ public class DeptController {
         }
     }
     @Test
-    public void test1(){
+    public void testGetAllDept(){
         // 4. 通过 Session 调用指定配置的 Sql 语句
         List<Dept> list = session.selectList("getAllDept");
         for (Dept dept: list){
             System.out.println(dept);
         }
+    }
+
+    @Test
+    public void testAddNewDept(){
+        Dept dept = new Dept();
+        dept.setDeptno(100);
+        dept.setDname("株洲");
+        dept.setLoc("湖南工业大学");
+        int result = session.insert("addNewDept",dept);
+        session.commit();
+        Assert.assertTrue(result == 1);
     }
 }
