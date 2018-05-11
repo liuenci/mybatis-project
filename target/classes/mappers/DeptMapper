@@ -24,4 +24,11 @@
         VALUES
         (#{deptno},#{dname},#{loc})
     </insert>
+
+    <update id="updateDeptInformation" parameterType="com.liuenci.pojo.Dept">
+        UPDATE
+        dept
+        set dname = #{dname} , loc = #{loc}
+        where deptno = #{deptno}
+    </update>
 </mapper>

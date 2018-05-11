@@ -7,8 +7,9 @@ public interface DeptMapper {
 
     int addNewDept(Dept dept);
 
-    List<Dept> getAllDept();
+    int updateDeptInformation();
 
+    List<Dept> getAllDept();
 
 
 }

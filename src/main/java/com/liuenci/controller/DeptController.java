@@ -49,4 +49,15 @@ public class DeptController {
         session.commit();
         Assert.assertTrue(result == 1);
     }
+
+    @Test
+    public void testUpdateDeptInformation(){
+        Dept dept = new Dept();
+        dept.setDeptno(100);
+        dept.setDname("株洲1");
+        dept.setLoc("湖南工业大学1");
+        int result = session.update("updateDeptInformation",dept);
+        session.commit();
+        Assert.assertTrue(result == 1);
+    }
 }

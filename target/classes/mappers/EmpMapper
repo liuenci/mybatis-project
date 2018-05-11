@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.liuenci.dao.EmpMapper">
+    <resultMap id="BaseResultMap" type="com.liuenci.pojo.Emp" >
+        <constructor >
+            <idArg column="empno" jdbcType="INTEGER" javaType="java.lang.Integer" />
+            <arg column="ename" jdbcType="VARCHAR" javaType="java.lang.String" />
+            <arg column="job" jdbcType="VARCHAR" javaType="java.lang.String" />
+            <arg column="mgr" jdbcType="INTEGER" javaType="java.lang.Integer" />
+            <arg column="hiredate" jdbcType="DATE" javaType="java.lang.String" />
+            <arg column="sal" jdbcType="DOUBLE" javaType="java.lang.Double" />
+            <arg column="comm" jdbcType="DOUBLE" javaType="java.lang.Double" />
+            <arg column="deptno" jdbcType="INTEGER" javaType="java.lang.Integer" />
+        </constructor>
+    </resultMap>
+    <sql id="Base_Column_List" >
+        empno,ename,job,mgr,hiredate,sal,comm,deptno
+    </sql>
+
+    <insert id="addNewEmp" parameterType="com.liuenci.pojo.Emp">
+        insert into emp values (#{empno},#{ename},#{job},#{mgr},to_date(#{hiredate},'yyyy-mm-dd'),#{sal},#{comm},#{deptno})
+    </insert>
+
+    <update id="updateEmpByEmpno" parameterType="com.liuenci.pojo.Emp">
+        update emp set ename = #{ename},job = #{job},mgr=#{mgr},hiredate=to_date(#{hiredate},'yyyy-mm-dd'),sal=#{sal},comm=#{comm},deptno=#{deptno} where empno = #{empno}
+    </update>
+
+    <delete id="deleteEmpByEmpno" parameterType="int">
+        delete from emp where empno = #{empno}
+    </delete>
+
+    <select id="getEmpByEmpno" parameterType="int" resultMap="BaseResultMap">
+        select <include refid="Base_Column_List"/> from emp where empno = #{empno}
+    </select>
+
+    <select id="getAllEmp" resultType="com.liuenci.pojo.Emp">
+        select <include refid="Base_Column_List"/> from emp
+    </select>
+
+    <select id="getEmpByCondition" resultType="com.liuenci.pojo.Emp" parameterType="map">
+        select <include refid="Base_Column_List"/> from emp where sal between #{start} and #{end}
+    </select>
+</mapper>
