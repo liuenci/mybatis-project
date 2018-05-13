@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.liuenci.dao.DeviceMapper">
+    <resultMap id="deviceIn" type="com.liuenci.pojo.DeviceIn">
+        <id column="code" property="code"/>
+        <result column="in_date" property="inDate" javaType="string" jdbcType="VARCHAR"/>
+        <result column="provider" property="provider"/>
+        <result column="telenno" property="telenno"/>
+        <result column="in_number" property="inNumber"/>
+        <result column="price" property="price"/>
+        <result column="buyer" property="buyer"/>
+    </resultMap>
+    <resultMap id="deviceRecode" type="com.liuenci.pojo.DeviceRecode">
+        <id column="code" property="code"/>
+        <result column="name" property="name"/>
+        <collection property="deviceIns" ofType="com.liuenci.pojo.DeviceIn">
+            <id column="dcode" property="code"/>
+            <result column="din_date" property="inDate" javaType="string" jdbcType="VARCHAR"/>
+            <result column="dprovider" property="provider"/>
+            <result column="dtelenno" property="telenno"/>
+            <result column="din_number" property="inNumber"/>
+            <result column="dprice" property="price"/>
+            <result column="dbuyer" property="buyer"/>
+        </collection>
+    </resultMap>
+    <resultMap id="recodeSum" type="com.liuenci.pojo.RecodeSum">
+        <id column="code" property="code"/>
+        <result column="dsum" property="dsum"/>
+    </resultMap>
+
+
+    <resultMap id="buyer" type="com.liuenci.pojo.BuyerRecode">
+        <id column="code" property="code"/>
+        <result column="in_date" property="inDate" javaType="string" jdbcType="VARCHAR"/>
+        <result column="provider" property="provider"/>
+        <result column="telenno" property="telenno"/>
+        <result column="in_number" property="inNumber"/>
+        <result column="price" property="price"/>
+        <result column="buyer" property="buyer"/>
+        <association property="deviceCode" javaType="com.liuenci.pojo.DeviceCode">
+            <id column="code" property="code"/>
+            <result column="name" property="name"/>
+        </association>
+    </resultMap>
+
+    <select id="selectDeviceInByDate" parameterType="string" resultMap="deviceIn">
+        select * from device_in where in_date = to_date(#{inDate},'yyyy-mm-dd')
+    </select>
+
+    <select id="selectRecodeByDevice" parameterType="int" resultMap="deviceRecode">
+        select d.code,d.name,di.code dcode,di.in_date din_date,di.provider dprovider,di.telenno dtelenno,di.in_number din_number,di.price dprice,di.buyer dbuyer from device_code d
+        left join device_in di on d.code = di.code
+        where d.code = #{code}
+    </select>
+
+    <select id="selectSum" parameterType="string" resultMap="recodeSum">
+        select code,sum(1) dsum from device_in group by code having code = #{code}
+    </select>
+
+    <select id="selectBuy" parameterType="string" resultMap="buyer">
+        select device_in.*,device_code.name from device_in
+        left join device_code on device_code.code = device_in.code
+        where buyer = #{buyer}
+    </select>
+</mapper>

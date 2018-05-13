@@ -34,5 +34,9 @@
     <mappers>
         <mapper resource="mappers/DeptMapper"></mapper>
         <mapper resource="mappers/EmpMapper"></mapper>
+        <mapper resource="mappers/DeptMapper1"></mapper>
+        <mapper resource="mappers/EmpMapper1"></mapper>
+        <mapper resource="mappers/DeptEmpMapper"></mapper>
+        <mapper resource="mappers/DeviceMapper"></mapper>
     </mappers>
 </configuration>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.liuenci.dao.EmpMapper1">
+    <resultMap id="empDeptMapper" type="com.liuenci.pojo.Emp1">
+        <id column="empno" property="empno"/>
+        <result column="ename" property="ename"/>
+        <result column="job" property="job"/>
+        <result column="mgr" property="mgr"/>
+        <result column="hiredate" property="hiredate"/>
+        <result column="sal" property="sal"/>
+        <result column="comm" property="comm"/>
+        <result column="deptno" property="deptno"/>
+        <association property="dept" javaType="com.liuenci.pojo.Dept">
+            <id column="deptno" property="deptno"/>
+            <result column="dname" property="dname"/>
+            <result column="loc" property="loc"/>
+        </association>
+    </resultMap>
+
+    <select id="selectAllEmp" resultMap="empDeptMapper" parameterType="int">
+        select * from emp e left join emp b on e.mgr = b.empno where e.empno = #{empno};
+    </select>
+</mapper>

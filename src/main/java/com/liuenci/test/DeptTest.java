@@ -1,4 +1,4 @@
-package com.liuenci.controller;
+package com.liuenci.test;
 
 import com.liuenci.pojo.Dept;
 import org.apache.ibatis.io.Resources;
@@ -14,7 +14,7 @@ import java.io.IOException;
 import java.io.Reader;
 import java.util.List;
 
-public class DeptController {
+public class DeptTest {
 
     static SqlSession session;
     @BeforeClass

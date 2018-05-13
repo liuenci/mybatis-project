@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.liuenci.dao.DeptEmpMapper">
+    <resultMap id="deptEmpMapper" type="com.liuenci.pojo.Dept1">
+        <id column="deptno" property="deptno"/>
+        <result column="dname" property="dname"/>
+        <result column="loc" property="loc"/>
+        <collection property="empList" ofType="com.liuenci.pojo.Emp">
+            <id column="empno" property="empno"/>
+            <result column="ename" property="ename"/>
+            <result column="job" property="job"/>
+            <result column="mgr" property="mgr"/>
+            <result column="hiredate" property="hiredate"/>
+            <result column="sal" property="sal"/>
+            <result column="comm" property="comm"/>
+            <result column="deptno" property="deptno"/>
+        </collection>
+    </resultMap>
+    <resultMap id="empBoss" type="com.liuenci.pojo.EmpBoss">
+        <id column="empno" property="empno"/>
+        <result column="ename" property="ename"/>
+        <result column="job" property="job"/>
+        <result column="mgr" property="mgr"/>
+        <result column="hiredate" property="hiredate"/>
+        <result column="sal" property="sal"/>
+        <result column="comm" property="comm"/>
+        <result column="deptno" property="deptno"/>
+        <association property="emp" javaType="com.liuenci.pojo.Emp">
+            <id column="bempno" property="empno"/>
+            <result column="bename" property="ename"/>
+            <result column="bjob" property="job"/>
+            <result column="bmgr" property="mgr"/>
+            <result column="bhiredate" property="hiredate"/>
+            <result column="bsal" property="sal"/>
+            <result column="bcomm" property="comm"/>
+            <result column="bdeptno" property="deptno"/>
+        </association>
+    </resultMap>
+    <resultMap id="empBossDept" type="com.liuenci.pojo.EmpBossDept">
+        <id column="empno" property="empno"/>
+        <result column="ename" property="ename"/>
+        <result column="job" property="job"/>
+        <result column="mgr" property="mgr"/>
+        <result column="hiredate" property="hiredate"/>
+        <result column="sal" property="sal"/>
+        <result column="comm" property="comm"/>
+        <result column="deptno" property="deptno"/>
+        <association property="emp" javaType="com.liuenci.pojo.Emp">
+            <id column="bempno" property="empno"/>
+            <result column="bename" property="ename"/>
+            <result column="bjob" property="job"/>
+            <result column="bmgr" property="mgr"/>
+            <result column="bhiredate" property="hiredate"/>
+            <result column="bsal" property="sal"/>
+            <result column="bcomm" property="comm"/>
+            <result column="bdeptno" property="deptno"/>
+        </association>
+        <association property="dept" javaType="com.liuenci.pojo.Dept">
+            <id column="ddeptno" property="deptno"/>
+            <result column="ddname" property="dname"/>
+            <result column="dloc" property="loc"/>
+        </association>
+    </resultMap>
+    <select id="selectAllDeptAndEmp" resultMap="deptEmpMapper">
+        select * from dept left join emp on dept.deptno = emp.deptno
+    </select>
+
+    <select id="selectEmpByEmpno" resultMap="empBoss" parameterType="int">
+        select e.*,
+        b.empno bempno,b.ename bename ,b.job bjob,b.mgr bmgr,b.hiredate bhiredate,b.sal bsal,b.comm bcomm,b.deptno bdeptno
+        from emp e left join emp b on e.mgr = b.empno where e.empno = #{empno}
+    </select>
+
+    <select id="selectEmpBossDeptByEmpno" resultMap="empBossDept" parameterType="int">
+        select e.*,
+        b.empno bempno,b.ename bename ,b.job bjob,b.mgr bmgr,b.hiredate bhiredate,b.sal bsal,b.comm bcomm,b.deptno bdeptno,
+        d.deptno ddeptno,d.dname ddname,d.loc dloc
+        from emp e
+        left join emp b on e.mgr = b.empno
+        left join dept d on e.deptno = d.deptno
+        where e.empno = #{empno}
+    </select>
+    <select id="selectDept" resultType="map">
+        select emp.deptno,dname,count(1) num from emp
+        left join dept on emp.deptno = dept.deptno
+        group by emp.deptno,dname
+    </select>
+    <select id="selectHire" resultType="map">
+        select to_char(hiredate, 'yyyy-mm') hiredate, count(*) num from emp
+        group by to_char(hiredate, 'yyyy-mm')
+    </select>
+</mapper>
