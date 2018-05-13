@@ -1,35 +1,71 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.liuenci.dao.DeptMapper">
-    <resultMap id="BaseResultMap" type="com.liuenci.pojo.Dept" >
-        <constructor >
-            <idArg column="deptno" jdbcType="INTEGER" javaType="java.lang.Integer" />
-            <arg column="dname" jdbcType="VARCHAR" javaType="java.lang.String" />
-            <arg column="loc" jdbcType="VARCHAR" javaType="java.lang.String" />
-        </constructor>
+<mapper namespace="com.liuenci.third.DeptMapper">
+    <resultMap id="deptEmp" type="com.liuenci.third.DeptEmp">
+        <id column="deptno" property="deptno"/>
+        <result column="dname" property="dname"/>
+        <result column="loc" property="loc"/>
+        <collection property="empList" ofType="com.liuenci.pojo.Emp">
+            <id column="empno" property="empno"/>
+            <result column="ename" property="ename"/>
+            <result column="job" property="job"/>
+            <result column="mgr" property="mgr"/>
+            <result column="hiredate" property="hiredate"/>
+            <result column="sal" property="sal"/>
+            <result column="comm" property="comm"/>
+        </collection>
     </resultMap>
 
-    <sql id="Base_Column_List" >
-        deptno,dname,loc
-    </sql>
-
-    <select id="getAllDept" resultMap="BaseResultMap">
-        SELECT
-        <include refid="Base_Column_List"/>
-        FROM DEPT
+    <select id="testIf" resultMap="deptEmp">
+        select * from dept
+        left join emp on dept.deptno = emp.deptno
+        where 1 = 1
+        <if test="empno != null">
+            and empno = #{empno}
+        </if>
+        <if test="ename != null and ename != ''">
+            and ename = #{ename}
+        </if>
     </select>
 
-    <insert id="addNewDept" parameterType="com.liuenci.pojo.Dept" >
-        insert into dept(deptno,dname,loc)
-        VALUES
-        (#{deptno},#{dname},#{loc})
-    </insert>
+    <select id="testTrim" resultMap="deptEmp">
+        select * from dept
+        left join emp on dept.deptno = emp.deptno
+        <trim prefix="where" prefixOverrides="and|or">
+            <if test="ename != null and ename != ''">
+                and ename = #{ename}
+            </if>
+            <if test="job != null and job != ''">
+                and job = #{job}
+            </if>
+        </trim>
+    </select>
 
-    <update id="updateDeptInformation" parameterType="com.liuenci.pojo.Dept">
-        UPDATE
-        dept
-        set dname = #{dname} , loc = #{loc}
-        where deptno = #{deptno}
-    </update>
+    <select id="testChooseWhen" resultMap="deptEmp">
+        select * from dept
+        left join emp on dept.deptno = emp.deptno
+        where 1 = 1
+        <choose>
+            <when test="job != null and job != ''">
+                and job = #{job}
+            </when>
+            <when test="ename != null and ename != ''">
+                and ename = #{ename}
+            </when>
+        </choose>
+    </select>
+
+    <select id="testForeach" resultMap="deptEmp">
+        select * from dept
+        left join emp dept.deptno = emp.deptno
+        <if test="integerList != null and integerList.size() > 0">
+            where dept.deptno in
+            <foreach collection="integerList" item="item" index="index" open="(" separator="," close=")">
+                #{item}
+            </foreach>
+        </if>
+
+
+    </select>
 </mapper>
