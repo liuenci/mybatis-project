@@ -12,5 +12,7 @@ public interface DeptMapper {
 
     List<DeptEmp> testChooseWhen(@Param("ename") String ename,@Param("job") String job);
 
-    List<DeptEmp> testForeach(List<Integer> integerList);
+    List<DeptEmp> testForeachList(List<Integer> deptnos);
+
+    List<DeptEmp> testForeachArray(@Param("ids") Integer[] ids);
 }

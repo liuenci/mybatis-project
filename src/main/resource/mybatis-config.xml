@@ -3,26 +3,26 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
-    <!--&lt;!&ndash;导入属性配置&ndash;&gt;
+    <!--导入属性配置-->
     <properties resource="datasource.properties"></properties>
     <settings>
-        &lt;!&ndash; Globally enables or disables any caches configured in any mapper under this configuration &ndash;&gt;
+        <!-- Globally enables or disables any caches configured in any mapper under this configuration -->
         <setting name="cacheEnabled" value="true"/>
-        &lt;!&ndash; Sets the number of seconds the driver will wait for a response from the database &ndash;&gt;
+        <!-- Sets the number of seconds the driver will wait for a response from the database -->
         <setting name="defaultStatementTimeout" value="3000"/>
-        &lt;!&ndash; Enables automatic mapping from classic database column names A_COLUMN to camel case classic Java property names aColumn &ndash;&gt;
+        <!-- Enables automatic mapping from classic database column names A_COLUMN to camel case classic Java property names aColumn -->
         <setting name="mapUnderscoreToCamelCase" value="true"/>
-        &lt;!&ndash; Allows JDBC support for generated keys. A compatible driver is required.
+        <!-- Allows JDBC support for generated keys. A compatible driver is required.
         This setting forces generated keys to be used if set to true,
-         as some drivers deny compatibility but still work &ndash;&gt;
+         as some drivers deny compatibility but still work -->
         <setting name="useGeneratedKeys" value="true"/>
     </settings>
 
-    &lt;!&ndash; Continue going here &ndash;&gt;
+    <!-- Continue going here -->
     <environments default="development">
         <environment id="development">
             <transactionManager type="JDBC" />
-            &lt;!&ndash; 配置数据库连接信息 &ndash;&gt;
+            <!-- 配置数据库连接信息 -->
             <dataSource type="POOLED">
                 <property name="driver" value="${driver}" />
                 <property name="url" value="${url}" />
@@ -38,5 +38,5 @@
         <mapper resource="mappers/EmpMapper1"></mapper>
         <mapper resource="mappers/DeptEmpMapper"></mapper>
         <mapper resource="mappers/DeviceMapper"></mapper>
-    </mappers>-->
+    </mappers>
 </configuration>

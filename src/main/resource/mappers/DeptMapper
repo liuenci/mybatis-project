@@ -56,16 +56,22 @@
         </choose>
     </select>
 
-    <select id="testForeach" resultMap="deptEmp">
+    <select id="testForeachList" resultMap="deptEmp">
         select * from dept
-        left join emp dept.deptno = emp.deptno
-        <if test="integerList != null and integerList.size() > 0">
+        left join emp on dept.deptno = emp.deptno
+        <foreach collection="list" item="item" index="index" open="where dept.deptno in (" separator="," close=")">
+            #{item}
+        </foreach>
+    </select>
+
+    <select id="testForeachArray" resultMap="deptEmp">
+        select * from dept
+        left join emp on dept.deptno = emp.deptno
+        <if test="#{ids}.length > 0">
             where dept.deptno in
-            <foreach collection="integerList" item="item" index="index" open="(" separator="," close=")">
+            <foreach collection="array" item="item" index="index" open="(" separator="," close=")">
                 #{item}
             </foreach>
         </if>
-
-
     </select>
 </mapper>

@@ -11,6 +11,7 @@ import org.junit.Test;
 
 import java.io.IOException;
 import java.io.Reader;
+import java.util.ArrayList;
 import java.util.List;
 
 public class MapperTest {
@@ -75,8 +76,37 @@ public class MapperTest {
             }
         }
     }
-    @Test
-    public void testForeach(){
 
+    @Test
+    public void testForeachList(){
+        List<Integer> integers = new ArrayList<Integer>();
+        integers.add(20);
+        integers.add(30);
+        integers.add(40);
+        List<DeptEmp> integerList = deptMapper.testForeachList(integers);
+        for (DeptEmp deptEmp:integerList){
+            System.out.println("部门信息:"+deptEmp);
+            List<Emp> empList = deptEmp.getEmpList();
+            if (!empList.isEmpty()){
+                for (Emp emp:empList){
+                    System.out.println("\t员工信息:"+emp);
+                }
+            }
+        }
+    }
+
+    @Test
+    public void testForeachArray(){
+        Integer[] integers = {20,30,40};
+        List<DeptEmp> integerList = deptMapper.testForeachArray(integers);
+        for (DeptEmp deptEmp:integerList){
+            System.out.println("部门信息:"+deptEmp);
+            List<Emp> empList = deptEmp.getEmpList();
+            if (!empList.isEmpty()){
+                for (Emp emp:empList){
+                    System.out.println("\t员工信息:"+emp);
+                }
+            }
+        }
     }
 }
