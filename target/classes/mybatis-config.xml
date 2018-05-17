@@ -3,26 +3,28 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
-    <!--导入属性配置-->
+    <!--&lt;!&ndash;导入属性配置&ndash;&gt;
     <properties resource="datasource.properties"></properties>
     <settings>
-        <!-- Globally enables or disables any caches configured in any mapper under this configuration -->
+        &lt;!&ndash; Globally enables or disables any caches configured in any mapper under this configuration &ndash;&gt;
         <setting name="cacheEnabled" value="true"/>
-        <!-- Sets the number of seconds the driver will wait for a response from the database -->
+        &lt;!&ndash; Sets the number of seconds the driver will wait for a response from the database &ndash;&gt;
         <setting name="defaultStatementTimeout" value="3000"/>
-        <!-- Enables automatic mapping from classic database column names A_COLUMN to camel case classic Java property names aColumn -->
+        &lt;!&ndash; Enables automatic mapping from classic database column names A_COLUMN to camel case classic Java property names aColumn &ndash;&gt;
         <setting name="mapUnderscoreToCamelCase" value="true"/>
-        <!-- Allows JDBC support for generated keys. A compatible driver is required.
+        &lt;!&ndash; Allows JDBC support for generated keys. A compatible driver is required.
         This setting forces generated keys to be used if set to true,
-         as some drivers deny compatibility but still work -->
+         as some drivers deny compatibility but still work &ndash;&gt;
         <setting name="useGeneratedKeys" value="true"/>
     </settings>
-
-    <!-- Continue going here -->
+    <plugins>
+        <plugin interceptor="com.github.pagehelper.PageInterceptor"></plugin>
+    </plugins>
+    &lt;!&ndash; Continue going here &ndash;&gt;
     <environments default="development">
         <environment id="development">
             <transactionManager type="JDBC" />
-            <!-- 配置数据库连接信息 -->
+            &lt;!&ndash; 配置数据库连接信息 &ndash;&gt;
             <dataSource type="POOLED">
                 <property name="driver" value="${driver}" />
                 <property name="url" value="${url}" />
@@ -38,5 +40,5 @@
         <mapper resource="mappers/EmpMapper1"></mapper>
         <mapper resource="mappers/DeptEmpMapper"></mapper>
         <mapper resource="mappers/DeviceMapper"></mapper>
-    </mappers>
+    </mappers>-->
 </configuration>

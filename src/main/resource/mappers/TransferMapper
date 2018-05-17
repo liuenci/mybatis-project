@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.liuenci.dao.TransferMapper">
+    <resultMap id="account" type="com.liuenci.pojo.Account">
+        <id column="aid" property="aid"/>
+        <result column="name" property="name"/>
+        <result column="pass" property="password"/>
+        <result column="sex" property="sex"/>
+        <result column="code" property="code"/>
+        <result column="open_money" property="openMoney"/>
+        <result column="open_time" property="openTime"/>
+        <result column="balance" property="balance"/>
+    </resultMap>
+
+    <resultMap id="transfer" type="com.liuenci.pojo.Transfer">
+        <id column="tid" property="tId"/>
+        <result column="a_id" property="aId"/>
+        <result column="ttype" property="ttype"/>
+        <result column="trans_time" property="transTime"/>
+        <result column="trans_money" property="transMoney"/>
+    </resultMap>
+    <insert id="insertAccount" parameterType="com.liuenci.pojo.Account">
+        insert into account2 values (seq.nextval,#{name},#{password},#{sex},#{code},#{openMoney},#{openTime},#{balance})
+    </insert>
+
+    <select id="selectAccountById" parameterType="int" resultMap="account">
+        select * from account2 where aid = #{aid}
+    </select>
+
+    <update id="updateAccount" parameterType="com.liuenci.pojo.Account">
+        update account2 set name = #{name},pass = #{password},sex = #{sex},code = #{code},open_money = #{openMoney},open_time = #{openTime},balance = #{balance} where aid = #{aid}
+    </update>
+
+
+    <insert id="insertTransfer" parameterType="com.liuenci.pojo.Transfer">
+        insert into transfer2 values(seq1.nextval,#{aId},#{ttype},#{transTime},#{transMoney})
+    </insert>
+
+    <select id="selectAllAccount" resultMap="account">
+        select * from account2
+    </select>
+
+    <select id="selectSum" parameterType="map" resultType="java.lang.Double">
+        select sum(trans_money) from transfer2 where a_id = #{aid} and ttype = #{type}
+    </select>
+
+    <select id="selectAllTransferById" resultMap="transfer">
+        select * from transfer2 where a_id = #{aid}
+    </select>
+</mapper>
